@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nivriti | Portfolio</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // REPLACE THIS WITH YOUR ACTUAL PUBLIC KEY FROM EMAILJS DASHBOARD
+            emailjs.init("YOUR_PUBLIC_KEY"); 
+        })();
+    </script>
 </head>
 <body>
 
     <div id="tsparticles"></div>
+
+    <div id="heart-container"></div>
+
+    <div id="thankYouPopup" class="popup-modal">
+        <div class="popup-content">
+            <div class="heart-icon">❤️</div>
+            <h2>Thank You!</h2>
+            <p>Your message has been sent to Nivriti.</p>
+            <button id="closePopupBtn" class="btn">Close</button>
+        </div>
+    </div>
 
     <div class="main-container">
         
@@ -32,7 +47,7 @@
             <ul class="nav">
                 <li><a href="#" class="nav-link active" data-index="0"><i class="fa fa-home"></i> Home</a></li>
                 <li><a href="#" class="nav-link" data-index="1"><i class="fa fa-user"></i> About Me</a></li>
-                <li><a href="#" class="nav-link" data-index="2"><i class="fa fa-list"></i> Services</a></li>
+                <li><a href="#" class="nav-link" data-index="2"><i class="fa fa-code-branch"></i> Projects</a></li> 
                 <li><a href="#" class="nav-link" data-index="3"><i class="fa fa-briefcase"></i> Achievements</a></li>
                 <li><a href="#" class="nav-link" data-index="4"><i class="fa fa-comments"></i> Contact Me</a></li>
             </ul>
@@ -49,8 +64,8 @@
                             <p>I'm a passionate learner who loves building clean, user-friendly interfaces and exploring how technology shapes real-world solutions.</p>
                             
                             <div class="btn-group">
-                                <a href="#" class="btn" data-index="1">About Me</a>
-                                <a href="#" class="btn" data-index="4">Contact Me</a>
+                                <a href="https://www.linkedin.com/in/nivriti-pandey-27p/" target="_blank" class="btn">LinkedIn</a>
+                                <a href="https://github.com/NivritiPandey" target="_blank" class="btn">Github</a>
                             </div>
                         </div>
                         <div class="home-img">
@@ -66,20 +81,13 @@
                         </div>
                         <div class="about-content">
                             <h3>I'm Nivriti, A Web Developer</h3>
-                            <p>I'm a passionate learner who loves building clean, user-friendly interfaces and exploring how technology shapes real-world solutions. Currently, I’m sharpening my skills in *HTML, CSS, C programming, and gradually moving into **JavaScript* to build fully functional web projects.
-</p>
+                            <p>I'm a passionate learner who loves building clean, user-friendly interfaces and exploring how technology shapes real-world solutions. Currently, I’m sharpening my skills in <em>HTML, CSS, C programming</em>, and gradually moving into <em>JavaScript</em> to build fully functional web projects.</p>
                             
                             <div class="about-details">
                                 <div class="info-column">
                                     <ul>
-                                        <li><strong>Availability:</strong> 24/7</li>
+                                        <li><strong>Availability:</strong> Working hours</li>
                                         <li><strong>Age:</strong> 17 Years</li>
-                                    </ul>
-                                </div>
-                                <div class="info-column">
-                                    <ul>
-                                        <li><strong>Country:</strong> India</li>
-                                        <li><strong>Phone:</strong> +91 91477 45571</li>
                                     </ul>
                                 </div>
                             </div>
@@ -105,33 +113,35 @@
                 <section class="section swiper-slide">
                     <div class="container">
                         <div class="title">
-                            <h2>Services</h2>
+                            <h2>Projects</h2>
                         </div>
-                        <div class="services-grid">
-                            <div class="service-card">
-                                <i class="fa fa-laptop-code"></i>
-                                <h3>Web Design</h3>
-                                <p></p>
+                        <div class="projects-grid gallery-grid">
+                            <div class="gallery-item project-item" data-type="project" data-src="project-image-1.jpg" data-link="https://your-live-project-link-1.com">
+                                <img src="spotify-clone.jpg" alt="Spotify Clone">
+                                <div class="project-overlay">
+                                    <h3>Spotify Clone</h3>
+                                    <p>HTML & CSS PRACTICE.</p>
+                                </div>
                             </div>
-                            <div class="service-card">
-                                <i class="fa fa-code"></i>
-                                <h3>Web Development</h3>
-                                <p>HTML , CSS & Javascript </p>
                             </div>
-                            
-                        </div>
                     </div>
                 </section>
 
                 <section class="section swiper-slide">
                     <div class="container">
                         <div class="title">
-                            <h2>Gallery</h2>
+                            <h2>Achievements</h2>
                         </div>
                         <div class="gallery-grid">
-                            <div class="gallery-item"><img src="Screenshot 2025-12-06 111722.png" alt="Work 1" ></div>
-                            <div class="gallery-item"><img src="Certificate 2.jpg" alt="Work 2" ></div>
-                            <div class="gallery-item"><img src="Certificate 3.jpg" alt="Work 3"></div>
+                            <div class="gallery-item certificate-item" data-type="certificate" data-src="cert 1.jpg" data-certificate-url="https://verify-link-1.com">
+                                <img src="Screenshot 2025-12-06 111722.png" alt="Certificate 1">
+                            </div>
+                            <div class="gallery-item certificate-item" data-type="certificate" data-src="cert 2.jpg" data-certificate-url="https://verify-link-2.com">
+                                <img src="Certificate 2.jpg" alt="Certificate 2">
+                            </div>
+                            <div class="gallery-item certificate-item" data-type="certificate" data-src="cert 3.jpg" data-certificate-url="https://verify-link-3.com">
+                                <img src="Certificate 3.jpg" alt="Certificate 3">
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -161,13 +171,13 @@
                             </div>
                             <div class="contact-form">
                                 <h3>Send Me A Message</h3>
-                                <form>
+                                <form id="contactForm">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Name" class="form-control">
-                                        <input type="email" placeholder="Email" class="form-control">
+                                        <input type="text" name="from_name" id="from_name" placeholder="Name" class="form-control" required>
+                                        <input type="email" name="from_email" id="from_email" placeholder="Email" class="form-control" required>
                                     </div>
-                                    <input type="text" placeholder="Subject" class="form-control">
-                                    <textarea placeholder="Your Message..." class="form-control"></textarea>
+                                    <input type="text" name="subject" id="subject" placeholder="Subject" class="form-control" required>
+                                    <textarea name="message" id="message" placeholder="Your Message..." class="form-control" required></textarea>
                                     <button type="submit" class="btn">Send Message</button>
                                 </form>
                             </div>
@@ -176,6 +186,14 @@
                 </section>
 
             </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged Photo/Certificate">
+            <a id="modalLinkBtn" href="#" target="_blank" class="btn modal-btn">Visit Live Site / Verify Certificate</a>
         </div>
     </div>
 
