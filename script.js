@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // SEND EMAIL VIA EMAILJS
             // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values from EmailJS
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            emailjs.sendForm('service_mhcyt0o', 'template_ol1pxdj', this)
                 .then(function() {
                     console.log('SUCCESS!');
                     // Trigger Effects

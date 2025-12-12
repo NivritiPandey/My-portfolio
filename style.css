@@ -208,7 +208,7 @@ body {
 
 /* 16:9 ASPECT RATIO FIX FOR PROJECTS */
 .project-item img {
-    width: 100%;
+    width: 50%;
     aspect-ratio: 16 / 9; /* This enforces the 16:9 ratio */
     object-fit: cover;    /* Ensures image covers the area without stretching */
     display: block;
