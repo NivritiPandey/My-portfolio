@@ -186,12 +186,16 @@ body {
 .progress-bar { height: 8px; background: var(--bg-black-50); border-radius: 10px; }
 .progress { height: 100%; background: var(--skin-color); border-radius: 10px; }
 
-/* --- Projects & Achievements Grid --- */
+/* ------------------------------------------- */
+/* --- FIXED PROJECTS & ACHIEVEMENTS GRID --- */
+/* ------------------------------------------- */
+
 .gallery-grid {
     display: grid;
+    /* This creates responsive columns that sit side-by-side */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-     aspect-ratio: 16 / 9;
+    width: 100%;
 }
 
 .gallery-item {
@@ -201,22 +205,25 @@ body {
     cursor: pointer !important;
     transition: transform 0.3s ease;
     background: var(--bg-black-50);
+    /* Ensures the card content stays inside */
+    display: flex;
+    flex-direction: column;
 }
+
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* 16:9 ASPECT RATIO FIX FOR PROJECTS */
+/* Style for PROJECT images */
 .project-item img {
-    width: 50%;
-    aspect-ratio: 16 / 9; /* This enforces the 16:9 ratio */
-    object-fit: cover;    /* Ensures image covers the area without stretching */
+    width: 100%;  /* CHANGED: Forces image to fill the card width */
+    height: 200px; /* Sets a standard height for all project cards */
+    object-fit: cover; /* Ensures image isn't stretched */
     display: block;
-    height: auto;
 }
 
-/* Standard height for certificates */
+/* Style for CERTIFICATE images */
 .certificate-item img {
     width: 100%;
     height: 250px; 
@@ -229,16 +236,19 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
+    width: 100%; /* Ensures overlay covers full width */
+    background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 15px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
-    pointer-events: none; /* Allows click to pass through to the image */
+    pointer-events: none;
 }
+
 .project-item:hover .project-overlay {
     transform: translateY(0);
 }
+
 .project-overlay h3 { margin: 0 0 5px 0; font-size: 18px; color: var(--skin-color); }
 .project-overlay p { margin: 0; font-size: 14px; }
 .btn-sm {
@@ -250,6 +260,11 @@ body {
     margin-top: 10px;
     display: inline-block;
 }
+
+/* ------------------------------------------- */
+/* --- END OF GRID FIX --- */
+/* ------------------------------------------- */
+
 
 /* --- MODAL STYLES --- */
 .modal {
