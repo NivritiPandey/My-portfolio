@@ -186,13 +186,11 @@ body {
 .progress-bar { height: 8px; background: var(--bg-black-50); border-radius: 10px; }
 .progress { height: 100%; background: var(--skin-color); border-radius: 10px; }
 
-/* ------------------------------------------- */
+
 /* --- FIXED PROJECTS & ACHIEVEMENTS GRID --- */
-/* ------------------------------------------- */
 
 .gallery-grid {
     display: grid;
-    /* This creates responsive columns that sit side-by-side */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     width: 100%;
@@ -205,7 +203,7 @@ body {
     cursor: pointer !important;
     transition: transform 0.3s ease;
     background: var(--bg-black-50);
-    /* Ensures the card content stays inside */
+    aspect-ratio: 16/9;
     display: flex;
     flex-direction: column;
 }
@@ -217,9 +215,9 @@ body {
 
 /* Style for PROJECT images */
 .project-item img {
-    width: 100%;  /* CHANGED: Forces image to fill the card width */
-    height: 200px; /* Sets a standard height for all project cards */
-    object-fit: cover; /* Ensures image isn't stretched */
+    width: 100%;  
+    height: 200px; 
+    object-fit: cover; 
     display: block;
 }
 
@@ -236,7 +234,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%; /* Ensures overlay covers full width */
+    width: 100%; 
     background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 15px;
@@ -261,10 +259,7 @@ body {
     display: inline-block;
 }
 
-/* ------------------------------------------- */
 /* --- END OF GRID FIX --- */
-/* ------------------------------------------- */
-
 
 /* --- MODAL STYLES --- */
 .modal {
