@@ -216,7 +216,7 @@ body {
 /* Style for PROJECT images */
 .project-item img {
     width: 100%;  
-    height: 200px; 
+    height: 100%; 
     object-fit: cover; 
     display: block;
 }
@@ -224,7 +224,7 @@ body {
 /* Style for CERTIFICATE images */
 .certificate-item img {
     width: 100%;
-    height: 250px; 
+    height: 100%; 
     object-fit: cover; 
     display: block;
 }
