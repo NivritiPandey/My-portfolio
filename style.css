@@ -167,7 +167,9 @@ body {
     border: none;
     cursor: pointer !important;
 }
-.btn:hover { background: #2cb581; }
+.btn:hover { background: #2cb581;
+            box-shadow: 0px 8px 8px rgba(37, 99, 235, 0.45);
+           }
 .home-img { flex: 0 0 40%; max-width: 40%; text-align: center; }
 .home-img img {
     width: 300px; height: 300px;
